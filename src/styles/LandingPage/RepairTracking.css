@@ -1,0 +1,179 @@
+
+.tracking-section {
+  padding: 75px 0;
+  background: #ffffff;
+}
+
+.tracking-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 55px;
+  padding: 55px 60px;
+  border-radius: 16px;
+  background: linear-gradient(
+    115deg,
+    #07345c 0%,
+    #0c477b 55%,
+    #07548f 100%
+  );
+  box-shadow: 0 12px 28px rgba(7, 50, 92, 0.12);
+}
+
+.tracking-content {
+  min-width: 0;
+}
+
+.tracking-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #50cbff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.tracking-content h2 {
+  margin: 0 0 15px;
+  color: #ffffff;
+  font-size: clamp(28px, 2.8vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.tracking-content p {
+  max-width: 440px;
+  margin: 0;
+  color: #d8e9f8;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.tracking-form-container {
+  min-width: 0;
+}
+
+.tracking-form {
+  display: flex;
+  gap: 12px;
+}
+
+.tracking-input-wrapper {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #8092a5;
+}
+
+.tracking-input {
+  width: 100%;
+  min-width: 0;
+  height: 56px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #173650;
+  font-size: 15px;
+}
+
+.tracking-input::placeholder {
+  color: #8a9bad;
+}
+
+.tracking-input-wrapper:focus-within {
+  outline: 3px solid #7bcfff;
+  outline-offset: 2px;
+}
+
+.tracking-button {
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 8px;
+  background: #087af2;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.tracking-button:hover {
+  background: #2092ff;
+  transform: translateY(-2px);
+}
+
+.tracking-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 13px 0 0;
+  color: #d4e6f6;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.tracking-info svg {
+  flex-shrink: 0;
+}
+
+.tracking-message {
+  margin: 15px 0 0;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 850px) {
+  .tracking-card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tracking-section {
+    padding: 55px 0;
+  }
+
+  .tracking-card {
+    padding: 28px 20px;
+  }
+
+  .tracking-form {
+    flex-direction: column;
+  }
+
+  .tracking-input-wrapper {
+    min-height: 56px;
+  }
+
+  .tracking-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tracking-button {
+    transition: none;
+  }
+}

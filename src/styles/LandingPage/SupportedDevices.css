@@ -1,0 +1,162 @@
+
+.devices-section {
+  padding: 85px 0;
+  background: linear-gradient(
+    110deg,
+    #f4f8fd 0%,
+    #eef4fb 55%,
+    #f8fbff 100%
+  );
+  overflow: hidden;
+}
+
+.devices-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+  min-height: 390px;
+}
+
+.devices-content {
+  min-width: 0;
+}
+
+.devices-heading {
+  margin: 12px 0 15px;
+  color: #102d4b;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+
+.devices-description {
+  max-width: 540px;
+  margin: 0 0 32px;
+  color: #627b94;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.devices-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.device-item {
+  display: flex;
+  min-width: 75px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s ease;
+}
+
+.device-item:hover {
+  transform: translateY(-5px);
+}
+
+.device-icon {
+  display: flex;
+  width: 65px;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e4f0ff;
+  color: #087af2;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.device-item:hover .device-icon {
+  background: #087af2;
+  color: #ffffff;
+}
+
+.device-name {
+  color: #183a59;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.devices-image-container {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.devices-image {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  max-height: 410px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.devices-image-container:hover .devices-image {
+  transform: scale(1.03);
+}
+
+.devices-image-placeholder {
+  display: flex;
+  width: 100%;
+  min-height: 320px;
+  align-items: center;
+  justify-content: center;
+  color: #87b9e8;
+}
+
+@media (max-width: 850px) {
+  .devices-section {
+    padding: 55px 0;
+  }
+
+  .devices-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .devices-list {
+    justify-content: center;
+  }
+
+  .devices-image {
+    max-height: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .devices-heading {
+    font-size: 29px;
+  }
+
+  .devices-list {
+    gap: 18px;
+  }
+
+  .device-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .device-name {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .device-item,
+  .device-icon,
+  .devices-image {
+    transition: none;
+  }
+}
