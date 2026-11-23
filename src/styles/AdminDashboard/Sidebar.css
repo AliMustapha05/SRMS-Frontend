@@ -1,0 +1,132 @@
+
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(155deg, #111f33, #1a2e46);
+  color: #dbe7f7;
+}
+
+.admin-sidebar-brand {
+  min-height: 69px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.admin-brand-icon {
+  color: #3b91ff;
+  display: flex;
+}
+
+.admin-sidebar-brand h2 {
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.admin-sidebar-brand h2 span {
+  color: #49a0ff;
+}
+
+.admin-sidebar-brand p {
+  color: #a5b8d0;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.admin-sidebar-close {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.admin-sidebar-nav {
+  flex: 1;
+  padding: 16px 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 40px;
+  padding: 10px 15px;
+  color: #d5e2f2;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.admin-nav-link svg {
+  flex-shrink: 0;
+}
+
+.admin-nav-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.admin-nav-link.active {
+  background: linear-gradient(90deg, #1762cb, #1260c6);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.13);
+}
+
+.admin-sidebar-bottom {
+  padding: 14px 12px 20px;
+}
+
+.admin-sidebar-bottom p {
+  margin: 15px 10px 3px;
+  font-size: 10px;
+  color: #839bb9;
+}
+
+.admin-sidebar-bottom small {
+  margin-left: 10px;
+  color: #839bb9;
+  font-size: 10px;
+}
+
+.admin-overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-sidebar-close {
+    display: flex;
+  }
+
+  .admin-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 19, 37, 0.55);
+    z-index: 1090;
+  }
+}

@@ -1,0 +1,99 @@
+
+.admin-chart-container {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.admin-status-layout {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.admin-donut-wrapper {
+  position: relative;
+  flex: 0 0 47%;
+  min-width: 0;
+}
+
+.admin-donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.admin-donut-center strong {
+  font-size: 23px;
+  color: #102344;
+}
+
+.admin-donut-center span {
+  font-size: 11px;
+  color: #6b83a4;
+}
+
+.admin-status-legend {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.admin-legend-row {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) 25px 42px;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.admin-legend-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.admin-legend-name {
+  color: #506c93;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-legend-row strong {
+  font-size: 11px;
+  text-align: right;
+}
+
+.admin-legend-row small {
+  color: #7c93b2;
+  text-align: right;
+}
+
+.admin-chart-container .recharts-cartesian-axis-tick-value {
+  font-size: 11px;
+  fill: #627b9e;
+}
+
+@media (max-width: 650px) {
+  .admin-status-layout {
+    flex-direction: column;
+  }
+
+  .admin-donut-wrapper {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .admin-status-legend {
+    width: 100%;
+  }
+}
