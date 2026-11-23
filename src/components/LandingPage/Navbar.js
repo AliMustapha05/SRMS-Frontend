@@ -7,6 +7,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import "../../styles/LandingPage/Navbar.css";
 
@@ -27,6 +28,8 @@ function Navbar({ shop = {} }) {
   return (
     <header className="fixtech-navbar">
       <div className="container fixtech-nav-inner">
+
+        {/* Logo */}
         <a
           href="#home"
           className="fixtech-brand"
@@ -53,6 +56,7 @@ function Navbar({ shop = {} }) {
           </div>
         </a>
 
+        {/* Navigation Links */}
         <nav
           className={`fixtech-nav-links ${
             menuOpen ? "is-open" : ""
@@ -70,29 +74,31 @@ function Navbar({ shop = {} }) {
             </a>
           ))}
 
-          <button
-            type="button"
+          {/* Mobile Employee Login */}
+          <Link
+            to="/login"
             className="fixtech-login-button fixtech-mobile-login"
             onClick={closeMenu}
-            disabled
-            title="Employee login is coming soon"
           >
             <UserRound size={17} />
             Employee Login
-          </button>
+          </Link>
         </nav>
 
+        {/* Right Side Actions */}
         <div className="fixtech-nav-actions">
-          <button
-            type="button"
+
+          {/* Desktop Employee Login */}
+          <Link
+            to="/login"
             className="fixtech-login-button fixtech-desktop-login"
-            disabled
-            title="Employee login is coming soon"
+            onClick={closeMenu}
           >
             <UserRound size={17} />
             Employee Login
-          </button>
+          </Link>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
             className="fixtech-menu-toggle"
@@ -103,8 +109,13 @@ function Navbar({ shop = {} }) {
             aria-expanded={menuOpen}
             aria-controls="fixtech-navigation"
           >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? (
+              <X size={24} />
+            ) : (
+              <Menu size={24} />
+            )}
           </button>
+
         </div>
       </div>
     </header>
